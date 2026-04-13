@@ -95,7 +95,9 @@ const statusStyles: Record<BookingStatus, { text: string; bg: string }> = {
 };
 
 export default function DashboardScreen() {
-  const [activeFilter, setActiveFilter] = useState<"all" | BookingStatus>("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | BookingStatus>(
+    "all",
+  );
 
   const counts = useMemo(
     () => ({
@@ -125,13 +127,15 @@ export default function DashboardScreen() {
 
             <View className="flex-row items-center rounded-[10px] bg-[#0aa06f] px-3 py-2">
               <Ionicons name="wifi-outline" size={14} color="white" />
-              <Text className="ml-2 text-[16px] font-semibold text-white">Online</Text>
+              <Text className="ml-2 text-[16px] font-semibold text-white">
+                Online
+              </Text>
             </View>
           </View>
 
           <Text className="mt-4 text-[18px] leading-[28px] text-white/95">
-            Manage bookings, confirm availability, and track your community&apos;s
-            tourism activity
+            Manage bookings, confirm availability, and track your
+            community&apos;s tourism activity
           </Text>
         </View>
 
@@ -163,7 +167,9 @@ export default function DashboardScreen() {
             style={{ boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.08)" }}
           >
             <View className="flex-row items-center">
-              <Text className="mr-3 text-[16px] font-medium text-[#2f3f49]">Filter:</Text>
+              <Text className="mr-3 text-[16px] font-medium text-[#2f3f49]">
+                Filter:
+              </Text>
               <Pressable
                 onPress={() => setActiveFilter("all")}
                 className={`rounded-full px-4 py-2 ${
@@ -181,31 +187,32 @@ export default function DashboardScreen() {
             </View>
 
             <View className="mt-3 flex-row flex-wrap gap-3">
-              {(
-                ["pending", "confirmed", "completed"] as BookingStatus[]
-              ).map((status) => {
-                const isActive = activeFilter === status;
-                const countText = counts[status] > 0 ? ` (${counts[status]})` : "";
+              {(["pending", "confirmed", "completed"] as BookingStatus[]).map(
+                (status) => {
+                  const isActive = activeFilter === status;
+                  const countText =
+                    counts[status] > 0 ? ` (${counts[status]})` : "";
 
-                return (
-                  <Pressable
-                    key={status}
-                    onPress={() => setActiveFilter(status)}
-                    className={`rounded-full px-4 py-2 ${
-                      isActive ? "bg-[#0a7f5b]" : "bg-[#ececec]"
-                    }`}
-                  >
-                    <Text
-                      className={`text-[14px] font-semibold ${
-                        isActive ? "text-white" : "text-[#2f3f49]"
+                  return (
+                    <Pressable
+                      key={status}
+                      onPress={() => setActiveFilter(status)}
+                      className={`rounded-full px-4 py-2 ${
+                        isActive ? "bg-[#0a7f5b]" : "bg-[#ececec]"
                       }`}
                     >
-                      {status[0].toUpperCase() + status.slice(1)}
-                      {countText}
-                    </Text>
-                  </Pressable>
-                );
-              })}
+                      <Text
+                        className={`text-[14px] font-semibold ${
+                          isActive ? "text-white" : "text-[#2f3f49]"
+                        }`}
+                      >
+                        {status[0].toUpperCase() + status.slice(1)}
+                        {countText}
+                      </Text>
+                    </Pressable>
+                  );
+                },
+              )}
             </View>
           </View>
 
@@ -248,14 +255,18 @@ export default function DashboardScreen() {
                 </View>
 
                 <View className="mt-4 rounded-[14px] bg-[#f2f4f3] px-4 py-4">
-                  <Text className="text-[13px] text-[#6b7280]">{booking.village}</Text>
+                  <Text className="text-[13px] text-[#6b7280]">
+                    {booking.village}
+                  </Text>
                   <Text className="mt-2 text-[18px] font-semibold leading-[28px] text-[#111827]">
                     {booking.packageTitle}
                   </Text>
 
                   <View className="mt-3 flex-row items-center">
                     <Ionicons name="calendar-outline" size={16} color="#666" />
-                    <Text className="ml-1 mr-4 text-[14px] text-[#4b5563]">{booking.date}</Text>
+                    <Text className="ml-1 mr-4 text-[14px] text-[#4b5563]">
+                      {booking.date}
+                    </Text>
 
                     <Ionicons name="people-outline" size={16} color="#666" />
                     <Text className="ml-1 mr-4 text-[14px] text-[#4b5563]">
@@ -263,14 +274,18 @@ export default function DashboardScreen() {
                     </Text>
 
                     <Ionicons name="time-outline" size={16} color="#666" />
-                    <Text className="ml-1 text-[14px] text-[#4b5563]">{booking.days} days</Text>
+                    <Text className="ml-1 text-[14px] text-[#4b5563]">
+                      {booking.days} days
+                    </Text>
                   </View>
                 </View>
 
                 <Text className="mt-4 text-[16px] font-medium text-[#2f3f49]">
                   Contact Information:
                 </Text>
-                <Text className="mt-1 text-[16px] text-[#2f3f49]">{booking.email}</Text>
+                <Text className="mt-1 text-[16px] text-[#2f3f49]">
+                  {booking.email}
+                </Text>
 
                 <Text className="mt-3 text-[16px] font-medium text-[#2f3f49]">
                   Special Requests:
@@ -290,13 +305,21 @@ export default function DashboardScreen() {
                 {booking.status === "pending" ? (
                   <View className="flex-row gap-3">
                     <Pressable className="h-[62px] flex-1 flex-row items-center justify-center rounded-[10px] bg-[#0a7f5b] px-3">
-                      <Ionicons name="checkmark-circle-outline" size={18} color="white" />
+                      <Ionicons
+                        name="checkmark-circle-outline"
+                        size={18}
+                        color="white"
+                      />
                       <Text className="ml-2 text-center text-[16px] font-semibold text-white">
                         Confirm Booking
                       </Text>
                     </Pressable>
                     <Pressable className="h-[62px] flex-1 flex-row items-center justify-center rounded-[10px] bg-[#f6dfe0] px-3">
-                      <Ionicons name="close-circle-outline" size={18} color="#dc2626" />
+                      <Ionicons
+                        name="close-circle-outline"
+                        size={18}
+                        color="#dc2626"
+                      />
                       <Text className="ml-2 text-[16px] font-semibold text-[#b91c1c]">
                         Decline
                       </Text>
@@ -304,7 +327,11 @@ export default function DashboardScreen() {
                   </View>
                 ) : (
                   <Pressable className="flex-row items-center justify-center rounded-[12px] bg-[#dbe8fa] px-3 py-4">
-                    <Ionicons name="arrow-down-circle-outline" size={18} color="#1d4ed8" />
+                    <Ionicons
+                      name="arrow-down-circle-outline"
+                      size={18}
+                      color="#1d4ed8"
+                    />
                     <Text className="ml-2 text-[16px] font-semibold text-[#1d4ed8]">
                       View Traveler Profile
                     </Text>
