@@ -90,7 +90,7 @@ export default function HomeScreen() {
           <View className="absolute inset-0 bg-black/55" />
 
           <View
-            className="flex-1 justify-end px-6 pb-10 pt-8"
+            className="flex-1 justify-center px-6 pb-16 pt-12"
             style={{ minHeight: heroHeight }}
           >
             <View className="items-center">
