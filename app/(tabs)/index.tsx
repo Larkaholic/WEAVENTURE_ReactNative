@@ -249,12 +249,14 @@ export default function HomeScreen() {
             </Text>
 
             <Text className="mt-6 text-center text-[17px] leading-7 text-white/95">
-              Use the Journey Builder to create authentic travel experiences that share your
-              culture and support your community.
+              Use the Journey Builder to create authentic travel experiences
+              that share your culture and support your community.
             </Text>
 
             <Pressable className="mt-10 flex-row items-center self-center rounded-full bg-white px-7 py-4">
-              <Text className="text-[16px] font-semibold text-[#0C7B57]">Create a Journey</Text>
+              <Text className="text-[16px] font-semibold text-[#0C7B57]">
+                Create a Journey
+              </Text>
               <Ionicons name="arrow-forward" size={18} color="#0C7B57" />
             </Pressable>
           </View>
