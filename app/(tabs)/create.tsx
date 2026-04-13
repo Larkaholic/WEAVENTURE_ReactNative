@@ -161,8 +161,8 @@ export default function CreateScreen() {
             <Text className="mt-5 text-[15px] leading-6 text-[#0a6b50]/85">
               This tool helps you assemble 3–5 day journey packages by selecting
               activities, setting pricing, and managing cultural protocols. Each
-              journey should tell your village's unique story while ensuring
-              sustainable, respectful tourism.
+              journey should tell your village&apos;s unique story while
+              ensuring sustainable, respectful tourism.
             </Text>
           </View>
 
@@ -379,7 +379,7 @@ export default function CreateScreen() {
               {/* What's Included in Package Section */}
               <View className="mt-10">
                 <Text className="text-[20px] font-bold leading-6 text-[#0a6b50]">
-                  4. What's Included in Package
+                  4. What&apos;s Included in Package
                 </Text>
 
                 {/* Add Item Input */}
@@ -451,8 +451,8 @@ export default function CreateScreen() {
                 {includedItems.length === 0 && (
                   <View className="mt-6 rounded-[12px] border border-[#d8ddd9] bg-[#f9fafb] px-4 py-8">
                     <Text className="text-center text-[14px] leading-5 text-[#999999]">
-                      No items added yet. Add what's included in your journey
-                      package.
+                      No items added yet. Add what&apos;s included in your
+                      journey package.
                     </Text>
                   </View>
                 )}
