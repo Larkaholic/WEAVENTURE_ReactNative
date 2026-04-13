@@ -1,13 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import type { ReactNode } from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  View,
-} from "react-native";
+import { SafeAreaView, ScrollView, StatusBar, Text, View } from "react-native";
 
 const filters = ["All", "Cultural", "Nature", "Crafts"];
 
@@ -113,7 +107,8 @@ export default function DiscoverScreen() {
             </Text>
 
             <Text className="text-[17px] leading-7 text-white/92">
-              Explore authentic, immersive experiences in Cordillera Best Tourism Villages.
+              Explore authentic, immersive experiences in Cordillera Best
+              Tourism Villages.
             </Text>
           </View>
         </View>
@@ -178,7 +173,9 @@ export default function DiscoverScreen() {
               <View className="px-5 pb-5 pt-4">
                 <View className="flex-row items-center gap-1">
                   <Ionicons name="location-outline" size={14} color="#0a6b50" />
-                  <Text className="text-[13px] text-[#0a6b50]">{village.location}</Text>
+                  <Text className="text-[13px] text-[#0a6b50]">
+                    {village.location}
+                  </Text>
                 </View>
 
                 <Text className="mt-2 text-[24px] font-bold leading-[30px] text-[#10211D]">
@@ -190,7 +187,9 @@ export default function DiscoverScreen() {
                 </Text>
 
                 <View className="mt-5 flex-row items-center self-start gap-2">
-                  <Text className="text-[15px] font-semibold text-[#0a6b50]">Explore village</Text>
+                  <Text className="text-[15px] font-semibold text-[#0a6b50]">
+                    Explore village
+                  </Text>
                   <Ionicons name="arrow-forward" size={16} color="#0a6b50" />
                 </View>
               </View>
@@ -215,7 +214,9 @@ export default function DiscoverScreen() {
               <View className="px-5 pb-5 pt-4">
                 <View className="flex-row items-center gap-1">
                   <Ionicons name="location-outline" size={14} color="#0a6b50" />
-                  <Text className="text-[13px] text-[#0a6b50]">{packageItem.location}</Text>
+                  <Text className="text-[13px] text-[#0a6b50]">
+                    {packageItem.location}
+                  </Text>
                 </View>
 
                 <Text className="mt-2 text-[24px] font-bold leading-[30px] text-[#10211D]">
@@ -224,7 +225,9 @@ export default function DiscoverScreen() {
 
                 <View className="mt-3 flex-row items-center gap-2">
                   <Ionicons name="calendar-outline" size={14} color="#7A8782" />
-                  <Text className="text-[14px] text-[#6A7671]">{packageItem.duration}</Text>
+                  <Text className="text-[14px] text-[#6A7671]">
+                    {packageItem.duration}
+                  </Text>
                 </View>
 
                 <Text className="mt-3 text-[15px] leading-7 text-[#51635C]">
@@ -232,9 +235,13 @@ export default function DiscoverScreen() {
                 </Text>
 
                 <View className="mt-5 flex-row items-center justify-between">
-                  <Text className="text-[20px] font-bold text-[#0a6b50]">{packageItem.price}</Text>
+                  <Text className="text-[20px] font-bold text-[#0a6b50]">
+                    {packageItem.price}
+                  </Text>
                   <View className="flex-row items-center gap-2">
-                    <Text className="text-[15px] font-semibold text-[#0a6b50]">View Journey</Text>
+                    <Text className="text-[15px] font-semibold text-[#0a6b50]">
+                      View Journey
+                    </Text>
                     <Ionicons name="arrow-forward" size={16} color="#0a6b50" />
                   </View>
                 </View>
@@ -265,7 +272,9 @@ export default function DiscoverScreen() {
                     </Text>
                   </View>
 
-                  <Text className="text-[13px] text-[#6A7671]">{experience.duration}</Text>
+                  <Text className="text-[13px] text-[#6A7671]">
+                    {experience.duration}
+                  </Text>
                 </View>
 
                 <Text className="mt-3 text-[23px] font-bold leading-[29px] text-[#10211D]">
@@ -274,7 +283,9 @@ export default function DiscoverScreen() {
 
                 <View className="mt-2 flex-row items-center gap-1">
                   <Ionicons name="location-outline" size={14} color="#7A8782" />
-                  <Text className="text-[13px] text-[#6A7671]">{experience.location}</Text>
+                  <Text className="text-[13px] text-[#6A7671]">
+                    {experience.location}
+                  </Text>
                 </View>
 
                 <Text className="mt-3 text-[15px] leading-7 text-[#51635C]">
@@ -282,8 +293,12 @@ export default function DiscoverScreen() {
                 </Text>
 
                 <View className="mt-5 flex-row items-center justify-between">
-                  <Text className="text-[20px] font-bold text-[#0a6b50]">{experience.price}</Text>
-                  <Text className="text-[13px] text-[#6A7671]">{experience.guests}</Text>
+                  <Text className="text-[20px] font-bold text-[#0a6b50]">
+                    {experience.price}
+                  </Text>
+                  <Text className="text-[13px] text-[#6A7671]">
+                    {experience.guests}
+                  </Text>
                 </View>
               </View>
             </InfoCard>
@@ -300,7 +315,8 @@ export default function DiscoverScreen() {
             </Text>
 
             <Text className="mt-6 text-center text-[17px] leading-7 text-white/95">
-              Connect with indigenous communities and experience the authentic rhythms of mountain life.
+              Connect with indigenous communities and experience the authentic
+              rhythms of mountain life.
             </Text>
 
             <View className="mt-10 rounded-full bg-white px-6 py-4">
@@ -315,11 +331,19 @@ export default function DiscoverScreen() {
   );
 }
 
-function SectionHeading({ title, subtitle }: { title: string; subtitle: string }) {
+function SectionHeading({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) {
   return (
     <View className="px-4 pt-2">
       <Text className="px-1 text-[22px] font-bold text-[#10211D]">{title}</Text>
-      <Text className="mt-2 px-1 text-[14px] leading-6 text-[#61736C]">{subtitle}</Text>
+      <Text className="mt-2 px-1 text-[14px] leading-6 text-[#61736C]">
+        {subtitle}
+      </Text>
     </View>
   );
 }
