@@ -1,6 +1,6 @@
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
-import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout() {
   return (
@@ -37,7 +37,11 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "home" : "home-outline"} size={24} color={color} />
+            <Ionicons
+              name={focused ? "home" : "home-outline"}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
@@ -46,7 +50,11 @@ export default function TabLayout() {
         options={{
           title: "Discover",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "map" : "map-outline"} size={24} color={color} />
+            <Ionicons
+              name={focused ? "map" : "map-outline"}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
@@ -68,7 +76,11 @@ export default function TabLayout() {
         options={{
           title: "Dashboard",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "grid" : "grid-outline"} size={24} color={color} />
+            <Ionicons
+              name={focused ? "grid" : "grid-outline"}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
@@ -77,7 +89,11 @@ export default function TabLayout() {
         options={{
           title: "Admin",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "settings" : "settings-outline"} size={24} color={color} />
+            <Ionicons
+              name={focused ? "settings" : "settings-outline"}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />

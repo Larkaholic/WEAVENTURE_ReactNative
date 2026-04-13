@@ -5,7 +5,9 @@ export default function DiscoverScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Discover</Text>
-        <Text style={styles.subtitle}>Browse destinations, stories, and cultural routes.</Text>
+        <Text style={styles.subtitle}>
+          Browse destinations, stories, and cultural routes.
+        </Text>
       </View>
     </SafeAreaView>
   );

@@ -5,7 +5,9 @@ export default function DashboardScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Dashboard</Text>
-        <Text style={styles.subtitle}>Track listings, activity, and app performance.</Text>
+        <Text style={styles.subtitle}>
+          Track listings, activity, and app performance.
+        </Text>
       </View>
     </SafeAreaView>
   );

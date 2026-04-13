@@ -5,7 +5,9 @@ export default function AdminScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Admin</Text>
-        <Text style={styles.subtitle}>Manage content, users, and system settings.</Text>
+        <Text style={styles.subtitle}>
+          Manage content, users, and system settings.
+        </Text>
       </View>
     </SafeAreaView>
   );

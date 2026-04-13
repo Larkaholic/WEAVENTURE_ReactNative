@@ -5,7 +5,9 @@ export default function CreateScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Create</Text>
-        <Text style={styles.subtitle}>Add tours, events, and community experiences.</Text>
+        <Text style={styles.subtitle}>
+          Add tours, events, and community experiences.
+        </Text>
       </View>
     </SafeAreaView>
   );
